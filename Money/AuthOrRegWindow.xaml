@@ -1,0 +1,36 @@
+﻿<Window x:Class="Money.AuthOrRegWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Money"
+        mc:Ignorable="d"
+        Title="AuthOrRegWindow" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized">
+    <Grid Background="LightGray">
+        <Border Background="White" MaxHeight="350" MaxWidth="600" CornerRadius="30" Padding="20" Margin="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="20" Opacity="0.5" ShadowDepth="0"/>
+            </Border.Effect>
+
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,25,0,37" Width="544">
+                <TextBlock Margin="0 50 0 0" MaxHeight="30" MaxWidth="300" Text="Введите имя ↓" FontWeight="Bold"/>
+
+                <TextBox x:Name="tbName" MaxHeight="30" Width="200" FontWeight="Bold" BorderThickness="0.5" />
+
+                <TextBlock MaxHeight="30" MaxWidth="300" Text="Введите пароль ↓" FontWeight="Bold"/>
+
+                <PasswordBox x:Name="tbPass" MaxHeight="30" Width="200" FontWeight="Bold" BorderThickness="0.5" />
+
+                <CheckBox x:Name="checkBox1" HorizontalAlignment="Center" Content="Запомнить меня" Margin="0 10" FontWeight="Bold"/>
+
+                <TextBlock Text="Выберите зарегистрироваться, либо войти" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Click="RegClick" Height="25" Width="100" Background="Purple" FontWeight="Bold" Foreground="White" Margin="0 10 0 0" Content="register"/>
+                    <Button Click="AuthClick" Height="25" Width="100" Background="Purple" FontWeight="Bold" Foreground="White" Margin="10 10 0 0" Content="auth"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
